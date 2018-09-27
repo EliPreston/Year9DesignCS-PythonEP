@@ -2,7 +2,8 @@ import os
 
 print("****Slope Calculator****")
 #Python always assumes that your input is a
-#a string unless you tell it. 
+#string unless you tell it. 
+
 #To make a numeric type you have two options
 #decimals - float
 #integers - int

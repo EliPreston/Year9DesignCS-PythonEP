@@ -12,7 +12,7 @@ def submit():
 
 	output.config(state="normal")
 
-	outputValue = "Given\nradius:"+str(r)+" units\nheight:"+str(h)+" units\nThe volume is:"+str(v)+" units cubed\n\n"
+	outputValue = "Given\nradius:"+str(r)+" units\nheight:"+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
 
 	output.delete(1.0,tk.END)
 	output.insert(tk.INSERT,outputValue)
@@ -23,23 +23,29 @@ root = tk.Tk() #Constructs main window
 root.title("Volume of a Cylinder") #Configures the window
 
 #Construct the element
-labr = tk.Label(root, text="radius")
+labr = tk.Label(root, text="Radius")
 #Configuer element/widget/object
-labr.configure(background="red")
+labr.configure(background="blue")
 #Pack the element put it on the window
 labr.pack()
 
 entr = tk.Entry(root)
 entr.pack()
 
-labh = tk.Label(root, text="height")
-labh.configure(background="green")
+slide1 = tk.Scale(root, from_=0, to=100, resolution=0.25, orient=tk.HORIZONTAL)
+slide1.pack()
+
+labh = tk.Label(root, text="Height")
+labh.configure(background="purple")
 labh.pack()
 
 enth = tk.Entry(root)
 enth.pack()
 
-btn = tk.Button(root, text="Submit", command=submit)
+slide2 = tk.Scale(root, from_=0, to=100, resolution=0.25, orient=tk.HORIZONTAL)
+slide2.pack()
+
+btn = tk.Button(root, text="Submit Numbers", command=submit)
 btn.pack()
 
 output = tk.Text(root, width=50, height=10, borderwidth=3, relief=tk.GROOVE)
