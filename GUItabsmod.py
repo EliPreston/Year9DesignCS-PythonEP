@@ -112,6 +112,64 @@ outputt2.config(state="disabled")
 outputt2.pack()
 
 
+#######################################################
+
+
+tab3 = ttk.Frame(tabControl)
+tabControl.add(tab3, text="Rectangular Prism Volume Calculator")
+tabControl.pack(expand=1, fill="both")
+
+
+def submit():
+
+	print("Submit pressed")
+	l = float(entlt3.get())
+	w = float(entwt3.get())
+	h = float(entht3.get())
+
+	v = math.l*w*h
+	v = round(v,3)
+
+	outputt3.config(state="normal")
+
+	outputValue = "Given\nlength:"+str(l)+" units\nwidth:"+str(w)+" units\nheight:"+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
+
+	outputt3.delete(1.0,tk.END)
+	outputt3.insert(tk.INSERT,outputValue)
+	outputt3.config(state="disabled")
+
+
+
+lablt3 = tk.Label(tab3, text="Length")
+lablt3.configure(background="pink")
+lablt3.pack()
+
+entlt3 = tk.Entry(tab3)
+entlt3.pack()
+
+labwt3 = tk.Label(tab3, text="Width")
+labwt3.configure(background="violet")
+labwt3.pack()
+
+entwt3 = tk.Entry(tab3)
+entwt3.pack()
+
+labht3 = tk.Label(tab3, text="Height")
+labht3.configure(background="grey")
+labht3.pack()
+
+entht3 = tk.Entry(tab3)
+entht3.pack()
+
+btnt3 = tk.Button(tab3, text="Submit Numbers", command=submit)
+btnt3.pack()
+
+outputt3 = tk.Text(tab3, width=50, height=10, borderwidth=3, relief=tk.GROOVE)
+outputt3.config(state="disabled")
+outputt3.pack()
+
+
+
 
 root.mainloop()
 
