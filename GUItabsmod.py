@@ -20,7 +20,7 @@ def submit():
 
 	outputt1.config(state="normal")
 
-	outputValue = "Given\nradius:"+str(r)+" units\nheight:"+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
+	outputValue = "Given\nRadius: "+str(r)+" units\nHeight: "+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
 
 	outputt1.delete(1.0,tk.END)
 	outputt1.insert(tk.INSERT,outputValue)
@@ -29,6 +29,7 @@ def submit():
 
 root = tk.Tk()                                                 #Create instance
 root.title("Calculators")                                      #Sets title
+root.config(background="black")
 
 tabControl = ttk.Notebook(root)                                #Created tabcontrol
 
@@ -58,6 +59,7 @@ btnt1 = tk.Button(tab1, text="Submit Numbers", command=submit)
 btnt1.pack()
 
 outputt1 = tk.Text(tab1, width=50, height=10, borderwidth=3, relief=tk.GROOVE)
+outputt1.config(font="helvetica 15", background="black", foreground="white")
 outputt1.config(state="disabled")
 outputt1.pack()
 
@@ -81,7 +83,7 @@ def submit():
 
 	outputt2.config(state="normal")
 
-	outputValue = "Given\nradius:"+str(r)+" units\nheight:"+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
+	outputValue = "Given\nRadius: "+str(r)+" units\nHeight: "+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
 
 	outputt2.delete(1.0,tk.END)
 	outputt2.insert(tk.INSERT,outputValue)
@@ -108,6 +110,7 @@ btnt2 = tk.Button(tab2, text="Submit Numbers", command=submit)
 btnt2.pack()
 
 outputt2 = tk.Text(tab2, width=50, height=10, borderwidth=3, relief=tk.GROOVE)
+outputt2.config(font="helvetica 15", background="black", foreground="white")
 outputt2.config(state="disabled")
 outputt2.pack()
 
@@ -165,6 +168,7 @@ btnt3 = tk.Button(tab3, text="Submit Numbers", command=submit)
 btnt3.pack()
 
 outputt3 = tk.Text(tab3, width=50, height=10, borderwidth=3, relief=tk.GROOVE)
+outputt3.config(font="helvetica 15", background="black", foreground="white")
 outputt3.config(state="disabled")
 outputt3.pack()
 
