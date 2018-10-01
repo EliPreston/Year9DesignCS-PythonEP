@@ -130,12 +130,12 @@ def submit():
 	w = float(entwt3.get())
 	h = float(entht3.get())
 
-	v = math.l*w*h
+	v = l*w*h
 	v = round(v,3)
 
 	outputt3.config(state="normal")
 
-	outputValue = "Given\nlength:"+str(l)+" units\nwidth:"+str(w)+" units\nheight:"+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
+	outputValue = "Given\nLength: "+str(l)+" units\nWidth: "+str(w)+" units\nHeight: "+str(h)+" units\nThe volume is: "+str(v)+" units cubed\n\n"
 
 	outputt3.delete(1.0,tk.END)
 	outputt3.insert(tk.INSERT,outputValue)
