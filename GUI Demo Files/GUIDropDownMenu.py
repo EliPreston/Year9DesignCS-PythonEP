@@ -7,7 +7,7 @@ def change(*args):
 root = tk.Tk() #Constructs our main window
 
 #List of strings
-#My list is called options there are 3 elements with index 0 to 2
+#The list is called options there are 3 elements with index 0 to 2
 #print(OPTIONS[2])
 OPTIONS = [
 	"eggs",

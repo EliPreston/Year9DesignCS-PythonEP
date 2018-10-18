@@ -9,10 +9,11 @@ def change(*args):
 root = tk.Tk()
 
 OPTIONS = [
-	"eggs",
-	"bunny",
-	"chicken",
+	"1",
+	"2",
+	"3",
 ]
+
 
 var = tk.StringVar(root)
 var.set(OPTIONS[0])
@@ -21,10 +22,15 @@ var.trace("w",change)
 dropDownMenu = tk.OptionMenu(root,var, OPTIONS[0],OPTIONS[1],OPTIONS[2])
 dropDownMenu.pack()
 
+OPTIONS1 = tk.OptionMenu(OPTIONS[0])
 
-labrO1 = tk.Label(OPTIONS, text="Radius")
-labrO1.configure(background="blue")
-labrO1.pack()
+
+lab = tk.Label(root, text="Help")
+lab.configure(background="white")
+lab.pack()
+
+entr = tk.Entry()
+entr.pack()
 
 root.mainloop()
-print("END Program")
+print("Program Terminated")
