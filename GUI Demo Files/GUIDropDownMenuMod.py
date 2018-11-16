@@ -22,7 +22,6 @@ var.trace("w",change)
 dropDownMenu = tk.OptionMenu(root,var, OPTIONS[0],OPTIONS[1],OPTIONS[2])
 dropDownMenu.pack()
 
-OPTIONS1 = tk.OptionMenu(OPTIONS[0])
 
 
 lab = tk.Label(root, text="Help")
