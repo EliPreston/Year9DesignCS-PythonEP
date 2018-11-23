@@ -9,33 +9,17 @@ from PIL import ImageTk, Image
 
 
 
-def submit():
-
-	print("submit pressed")
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-#*************************************
-#********* ALL GUI STUFF *************
-#*************************************
 
 root = tk.Tk()
 root.title("The Elements Study Tool")
 root.geometry("600x600")
 root.configure(background= 'red' )
 root.resizable(False,False)
+
 
 tabControl = ttk.Notebook(root)
 
@@ -94,12 +78,13 @@ outputPt1.grid(row = 3, column = 0, sticky = "w")
 
 #********* COLUMN 6 ******************
 
-patht1 = "1_Hydrogen.jpg"
-imgt1 = ImageTk.PhotoImage(Image.open(path))
-panelt1 = tk.Label(tab1, image = img)
-panelt1.grid(row = 1, column = 6, side = "bottom", fill = "both", expand = "yes")
-
-
+path = "1_Hydrogen.jpg"
+#Creates a Tkinter-compatible photo image, which can be used everywhere Tkinter expects an image object.
+img = ImageTk.PhotoImage(Image.open(path))
+#The Label widget is a standard Tkinter widget used to display a text or image on the screen.
+panel = tk.Label(window, image = img)
+#The Pack geometry manager packs widgets in rows or columns.
+panel.grid(row = 1, column = 6, side = "bottom", fill = "both", expand = "yes")
 
 labAt1 = tk.Label(tab1, text= "Your Answer")
 labAt1.config()
@@ -143,7 +128,7 @@ tabControl.add(tab3, text="Previous Scores")
 tabControl.pack(expand=1, fill="both");
 
 
-btnAR = tk.Button(tab3, text="Arrange From Highest to Lowest", command=submit)
+btnAR = tk.Button(tab3, text="Arrange From Highest to Lowest")
 btnAR.grid(row = 0, column = 0, sticky = "w")
 
 outputAR = tk.Text(tab3, width = 20, height = 7, borderwidth=3, relief=tk.GROOVE)
@@ -154,37 +139,9 @@ outputAR.grid(row = 1, column = 0, sticky = "w")
 btnAR2 = tk.Button(tab3, text="Arrange From Lowest to Highest")
 btnAR2.grid(row = 0, column = 1, sticky = "w")
 
-
-
-
-scores 
-
-
-
-
 outputAR2 = tk.Text(tab3, width = 20, height = 7, borderwidth=3, relief=tk.GROOVE)
 outputAR2.config(state = "disabled")
 outputAR2.grid(row = 1, column = 1, sticky = "w")
-
-
-#********************************************
-#********* END OF ALL GUI STUFF *************
-#********************************************
-
-
-#tab3
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
