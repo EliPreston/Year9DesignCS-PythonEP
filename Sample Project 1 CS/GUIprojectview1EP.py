@@ -19,14 +19,6 @@ def submit():
 
 
 
-
-
-
-
-
-
-
-
 #*************************************
 #********* ALL GUI STUFF *************
 #*************************************
@@ -85,8 +77,13 @@ outputPt1 = tk.Text(tab1, width=10, height=1, borderwidth=3, relief=tk.GROOVE)
 outputPt1.config(state="disabled")
 outputPt1.grid(row = 3, column = 0, sticky = "w")
 
-btnHt1 = tk.Button(tab1, text="Hint?")
-btnHt1.grid(row = 4, column = 3, sticky = "w")
+
+labHt1 = tk.Label(tab1, text= 'Hint')
+labHt1.config(background= 'grey', foreground= 'white')
+labHt1.grid(row = 3, column = 0, sticky = 'w')
+
+#btnHt1 = tk.Button(tab1, text="Hint?")
+#btnHt1.grid(row = 4, column = 3, sticky = "w")
 
 outputPt1 = tk.Text(tab1, width=10, height=1, borderwidth=3, relief=tk.GROOVE)
 outputPt1.config(state="disabled")
@@ -94,10 +91,10 @@ outputPt1.grid(row = 3, column = 0, sticky = "w")
 
 #********* COLUMN 6 ******************
 
-patht1 = "1_Hydrogen.jpg"
-imgt1 = ImageTk.PhotoImage(Image.open(path))
-panelt1 = tk.Label(tab1, image = img)
-panelt1.grid(row = 1, column = 6, side = "bottom", fill = "both", expand = "yes")
+#patht1 = "1_Hydrogen.jpg"
+#imgt1 = ImageTk.PhotoImage(Image.open(path))
+#panelt1 = tk.Label(tab1, image = img)
+#panelt1.grid(row = 1, column = 6, side = "bottom", fill = "both", expand = "yes")
 
 
 
@@ -157,7 +154,7 @@ btnAR2.grid(row = 0, column = 1, sticky = "w")
 
 
 
-scores 
+ 
 
 
 
@@ -172,9 +169,25 @@ outputAR2.grid(row = 1, column = 1, sticky = "w")
 #********************************************
 
 
-#tab3
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#***************************
+#
 
 
 
