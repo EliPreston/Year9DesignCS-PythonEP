@@ -6,7 +6,9 @@ from PIL import ImageTk, Image
 
 
 
-def   
+def submit1():
+	print("submit")
+	
 
 
 
@@ -61,7 +63,7 @@ outputP = tk.Text(root, width=10, height=1, borderwidth=3, relief=tk.GROOVE)
 outputP.config(state="disabled", background= 'grey')
 outputP.grid(row = 3, column = 0, sticky = "w")
 
-btnH = tk.Button(root, text="Hint?")
+btnH = tk.Button(root, text="Hint?", command=submit1)
 btnH.config()
 btnH.grid(row = 4, column = 3, sticky = "w")
 
