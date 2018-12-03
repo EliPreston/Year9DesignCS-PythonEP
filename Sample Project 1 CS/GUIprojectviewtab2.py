@@ -6,8 +6,8 @@ from PIL import ImageTk, Image
 
 
 element_list = ["Hydrogen","Helium","Lithium","Berilym", "Boron", "Carbon", "Nitrogen", "Oxygen", "Fluorine", "Neon", "Sodium", "Magnesium", "Aluminum", "Silicon", "Phosphorus", "Sulfur", "Chlorine", "Argon", "Potassium", "Calcium", "Scandium", "Titanium", "Vanadium", "Chromium", "Manganese", "Iron", "Cobalt", "Nickel", "Copper", "Zinc", "Gallium", "Germanium", "Arsenic", "Selenium", "Bromine", "Krypton", "Rubidium", "Strontium", "Yttrium", "Zirconium", "Niobium", "Molybdenum", "Technetium", "Ruthenium", "Rhodium", "Palladium", "Silver", "Cadmium", "Indium", "Tin", "Antimony", "Tellurium", "Iodine", "Xenon"]
-element_id = ["H","He","Li","Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe" ]
-
+element_id = ["Hydrogen is a chemical with the symbol H and atomic number 1","Helium is a chemical with the symbol He and atomic number 2.","Li","Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe" ]
+elementiddescription = ["Hydrogen is usually used in rocket fuel.", "Helium is used in party balloons."]
 
 def find(*args):
 	print("Finding Element...")
@@ -24,7 +24,7 @@ def find(*args):
 
 
 	if loc != -1:
-		outputValue = (element_id[loc])	
+		outputValue = (element_id[loc]+"\n"+elementiddescription[loc])	
 		outputEL.delete(1.0,tk.END)
 		outputEL.insert(tk.INSERT,outputValue)
 		outputEL.config(state="disabled")	
@@ -67,7 +67,7 @@ btnEF.config(background= 'grey')
 btnEF.grid(row = 2, column = 0, sticky = "w")
 btnEF.bind("<Button-1>",find)
 
-outputEL = tk.Text(root, width = 20, height = 7, borderwidth=3, relief=tk.GROOVE)
+outputEL = tk.Text(root, width = 40, height = 7, borderwidth=3, relief=tk.GROOVE)
 outputEL.config(state = "disabled", background= 'grey')
 outputEL.grid(row = 3, column = 0, sticky = "w")
 

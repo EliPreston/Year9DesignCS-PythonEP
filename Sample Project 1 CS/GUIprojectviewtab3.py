@@ -5,6 +5,9 @@ from PIL import ImageTk, Image
 from tkinter import messagebox
 
 
+#scoreslist = []
+#scoreslist = [int(x) for x in scoreslist]
+#scoreslist.append(outputFS)
 
 my_list = ['4', '6', '7', '1', '8']
 my_list = [int(x) for x in my_list]
@@ -70,7 +73,7 @@ root.resizable(False,False)
 #btnAR = tk.Button(root, text= "High to Low") #command=submit)
 #btnAR.config(background= 'grey')
 #btnAR.grid(row = 0, column = 0)
-labAR = tk.Label(root, text= 'high to low')
+labAR = tk.Label(root, text= 'High to Low')
 labAR.config(background= "grey")
 labAR.grid(row = 0, column = 0)
 labAR.bind("<Button-1>",clicked1)
@@ -84,7 +87,7 @@ outputAR.grid(row = 1, column = 0, sticky = "w")
 #btnAR2 = tk.Button(root, text= "Low to High")
 #btnAR2.config(background= 'grey')
 #btnAR2.grid(row = 0, column = 1)
-labAR2 = tk.Label(root, text= 'low to high')
+labAR2 = tk.Label(root, text= 'Low to High')
 labAR2.config(background= "grey")
 labAR2.grid(row = 0, column = 1)
 labAR2.bind("<Button-1>",clicked2)

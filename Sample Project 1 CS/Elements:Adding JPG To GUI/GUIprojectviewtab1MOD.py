@@ -5,7 +5,17 @@ from PIL import ImageTk, Image
 
 
 
-elements = ["Hydrogen"]
+
+elements = ["Hydrogen", "Helium"]
+
+
+
+
+
+
+
+
+
 
 
 def submitA(*args):	
@@ -23,7 +33,7 @@ def submitA(*args):
 			loc = [i]
 
 	if loc != -1:
-		outputValue = ("Correct")	
+		outputValue = ("Correct")
 		outputRW.delete(1.0,tk.END)
 		outputRW.insert(tk.INSERT,outputValue)
 		outputRW.config(state="disabled")
@@ -35,13 +45,16 @@ def submitA(*args):
 		outputRW.config(state="disabled")
 
 
+
+
 description = ["This is used in rocket fuel", "This has to do with party balloons"]
 
 def Hint(*args):
 	print("Getting Hint")	
 	outputH.config(state="normal")
 
-	outputValue = (description[0])	
+	outputValue = (description[0])
+	
 
 	outputH.delete(1.0,tk.END)
 	outputH.insert(tk.INSERT,outputValue)
@@ -56,9 +69,14 @@ def Hint(*args):
 
 
 
+
+
+
+
+
 root = tk.Tk()
 root.title("The Elements Study Tool")
-root.geometry("600x600")
+root.geometry("1080x1080")
 root.configure(background= 'grey' )
 root.resizable(False,False)
 
@@ -72,7 +90,7 @@ labT.grid(row = 0, column = 0, columnspan = 2)
 btnS = tk.Button(root, text="Start")
 btnS.grid(row = 1, column = 0, sticky = "w")
 
-labP = tk.Label(root, text= "Points During Quiz")
+labP = tk.Label(root, text= "Points")
 labP.config(background= 'grey')
 labP.grid(row = 2, column = 0, columnspan = 2, sticky = "w")
 
@@ -99,9 +117,9 @@ labO = tk.Label(root, text= "Other Information")
 labO.config(background= 'grey')
 labO.grid(row = 2, column = 3, columnspan = 3, sticky = "w")
 
-outputP = tk.Text(root, width=10, height=1, borderwidth=3, relief=tk.GROOVE)
+outputP = tk.Text(root, width=15, height=3, borderwidth=3, relief=tk.GROOVE)
 outputP.config(state="disabled", background= 'grey')
-outputP.grid(row = 3, column = 0, sticky = "w")
+outputP.grid(row = 3, column = 3, sticky = "w")
 
 btnH = tk.Button(root, text="Hint?", command=Hint)
 btnH.config()
@@ -115,7 +133,7 @@ outputH.grid(row = 5, column = 3, sticky = "w")
 
 path = "1_Hydrogen.jpg"
 img = ImageTk.PhotoImage(Image.open(path))
-panel = tk.Label(root, image = img, width = 250, height = 100)
+panel = tk.Label(root, image = img, width = 500, height = 600)
 panel.grid(row = 1, column = 6)
 
 
@@ -129,9 +147,6 @@ entA.config(background= 'grey')
 entA.grid(row = 3, column = 6, sticky = "w")
 
 
-labRA = tk.Label(root, text= "This will output a right or wrong text")
-labRA.config(background= 'grey')
-labRA.grid(row = 4, column = 6, sticky = "w")
 
 outputRW = tk.Text(root, width = 15, height = 3, borderwidth=3, relief=tk.GROOVE)
 outputRW.config(state = "disabled", background= 'grey')
