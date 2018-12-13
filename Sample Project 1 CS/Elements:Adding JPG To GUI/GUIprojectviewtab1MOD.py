@@ -55,29 +55,45 @@ def submitA(*args):
 
 	value = entA.get()
 
+
+	if value == data[0]:
+
+		outputValue1 = ("Correct")
+		outputRW.delete(1.0,tk.END)
+		outputRW.insert(tk.INSERT,outputValue1)
+		outputRW.config(state="disabled")
+
+	else:
+		outputValue = ("Wrong")
+		outputRW.delete(1.0,tk.END)
+		outputRW.insert(tk.INSERT,outputValue)
+		outputRW.config(state="disabled")
+
 	loc = -1
 
-	for i in range (0, len(elements), 1):
-		if elements[i] == value:
-			loc = [i]
+	
 
-		if loc != -1:
-			outputValue1 = ("Correct")
-			outputRW.delete(1.0,tk.END)
-			outputRW.insert(tk.INSERT,outputValue1)
-			outputRW.config(state="disabled")
+
+	#for i in range (0, len(elements), 1):
+	#	if elements[i] == value:
+	#		loc = [i]
+
+	#	if loc != -1:
+	#		outputValue1 = ("Correct")
+	#		outputRW.delete(1.0,tk.END)
+	#		outputRW.insert(tk.INSERT,outputValue1)
+	#		outputRW.config(state="disabled")
 			
-			"""
-			outputP.delete(1.0,tk.END)
-			outputP.insert(tk.INSERT,pointsDefault+1)
-			outputRW.config(state="disabled")
-			"""
+		
+			#outputP.delete(1.0,tk.END)
+			#outputP.insert(tk.INSERT,pointsDefault+1)
+			#outputRW.config(state="disabled")
 
-		else:
-			outputValue = ("Wrong")
-			outputRW.delete(1.0,tk.END)
-			outputRW.insert(tk.INSERT,outputValue)
-			outputRW.config(state="disabled")
+	#	else:
+	#		outputValue = ("Wrong")
+	#		outputRW.delete(1.0,tk.END)
+	#		outputRW.insert(tk.INSERT,outputValue)
+	#		outputRW.config(state="disabled")
 
 
 def Hint(*args):
